@@ -1,0 +1,240 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: beige;
+}
+
+/* Disabilita l'effetto di feedback sul clic */
+* {
+  -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */
+  -webkit-touch-callout: none; /* Impedisce la visualizzazione del menu di azione a lungo tocco */
+  -ms-touch-action: manipulation; /* Imposta il comportamento del tocco */
+  touch-action: manipulation; /* Imposta il comportamento del tocco */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
+  transition: opacity 0.3s ease; /* Transizione per la comparsa del contenuto */
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 0, 0);
+  color: #fff5f6;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bottonepopup{
+  font-size: 1rem; /* Imposta la dimensione del logo del menù */
+  color: red; /* Imposta il colore del testo */
+  border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
+  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
+  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
+  border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
+  background-color: white;
+}
+
+.popup-content{
+  font-size: 90%;
+}
+
+.bottonepopup{
+  font-size: 140%;
+}
+
+.marchio {
+  width: 200px;
+  height: auto;
+}
+
+.barradinavigazione {
+  display: flex;
+  align-items: center;
+}
+
+.barradinavigazione div {
+  margin-left: auto;
+}
+
+.barradinavigazione a {
+  margin-right: 38px;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+.linknonsottolineati {
+  color: inherit; /* Utilizza il colore del testo del padre */
+  text-decoration: none; /* Rimuovi la sottolineatura */
+  font-weight: normal; /* Imposta lo stile del testo normale */
+}
+
+.linknonsottolineati:hover {
+  font-weight: bold; /* Imposta lo stile del testo in grassetto */
+}
+
+ion-icon {
+  font-size: 21px;
+  color: black;
+}
+
+section{
+  padding: 2rem 9%;
+}
+
+.pulsanteprenotailtuodolce{
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background-color: #febd59;
+  color: black;
+  padding:.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-decoration: none; /* Rimuovi la sottolineatura */
+  font-weight: normal; /* Imposta lo stile del testo normale */
+}
+
+/* Nasconde il toggler del menu */
+header #toggler{
+  display: none; /* Nasconde il toggler del menu */
+}
+
+/* Stile per l'icona del menu (bars) */
+header .fa-bars{
+  font-size: 3rem; /* Imposta la dimensione del logo del menù */
+  color: black; /* Imposta il colore del testo */
+  border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
+  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
+  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
+  border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
+  display: none; /* Nasconde l'icona del menu */
+}
+
+.homepage{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url("tortaalcioccolato.png") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease; /* Aggiungi un'animazione di transizione */
+}
+
+.contenutohome{
+  max-width: 50rem;
+}
+
+.contenutohome h3{
+  font-size: 4rem;
+  color: black;
+  border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
+  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
+  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  background-color: #febd59;
+  text-align: center;
+}
+
+.contenutohome span{
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  line-height: 1.5;
+  color: black;
+  border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
+  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
+  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  background-color: #febd59;
+  text-align: center;
+}
+
+.contenutohome p{
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  line-height: 1.5;
+  color: black;
+  border-radius: 5rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
+  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
+  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  background-color: #febd59;
+  text-align: center;
+}
+
+/* Media query per schermi fino a 991px */
+@media (max-width:991px) {
+  html{
+    font-size: 55%; /* Imposta la dimensione del testo al 55% */
+  }
+  header{
+    padding: 2rem; /* Aggiunge padding all'header */
+  }
+}
+
+/* Media query per schermi fino a 768px */
+@media (max-width:768px) {
+  /* Mostra l'icona del menu */
+  header .fa-bars{
+    display: block; /* Mostra l'icona del menu */
+  }
+  /* Stile per la barra di navigazione */
+  header .elementibarranavigazione{
+    position: absolute; /* Imposta la posizione assoluta */
+    top:20%; left:0; right:0; /* Imposta la posizione in alto, a sinistra e a destra */
+    background: #fff5f6; /* Imposta il colore di sfondo */
+    border-top: .1rem solid rgba(0,0,0,.1); /* Imposta lo stile del bordo superiore */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 ); /* Nasconde la barra di navigazione */
+  }
+
+  .elementibarranavigazione a {
+    display: block; /* Imposta gli elementi "a" su una riga separata */
+    font-size: 2rem; /* Ingrossa il testo del link */
+    margin-bottom: 30px; /* Aggiunge spazio inferiore tra i link */
+  }
+
+  /* Mostra la barra di navigazione quando il toggler è selezionato */
+  header #toggler:checked ~ .elementibarranavigazione{
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Mostra la barra di navigazione */
+    transition: clip-path 0.70s ease; /* Aggiungi una transizione con durata di 0.70 secondi e un effetto di ease */
+  }
+
+  /* Nascondi la barra di navigazione quando il toggler non è selezionato */
+  header #toggler:not(:checked) ~ .elementibarranavigazione {
+  transition: clip-path 0.70s ease; /* Applica la stessa transizione quando il menù viene chiuso */
+  }
+
+  /* Stile per i link nella barra di navigazione */
+  header .elementibarranavigazione a{
+    display block; /* Imposta i link come blocchi */
+  }
+
+  /* Stile quando l'icona è attiva (premuto) */
+  header .fa-bars:active {
+    background-color: transparent; /* Imposta lo sfondo trasparente */
+  }
+}
+
+/* Media query per schermi fino a 450px */
+@media (max-width:450px) {
+  html{
+    font-size: 50%; /* Imposta la dimensione del testo al 50% */
+  }
+}
