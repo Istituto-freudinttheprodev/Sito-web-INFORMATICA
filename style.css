@@ -3,7 +3,7 @@ body {
   background-color: beige;
 }
 
-/* Disabilita l'effetto di feedback sul clic */
+/* Disabilita l'effetto di feedback sul clic su i dispositi mobile come tablet e telefoni*/
 * {
   -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */
   -webkit-touch-callout: none; /* Impedisce la visualizzazione del menu di azione a lungo tocco */
@@ -20,7 +20,8 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
-  transition: opacity 0.3s ease; /* Transizione per la comparsa del contenuto */
+  transition: opacity 1s ease; /* Transizione per la comparsa del contenuto */
+  font-size: 1.3rem;
 }
 
 .popup-content {
@@ -97,19 +98,6 @@ section{
   padding: 2rem 9%;
 }
 
-.pulsanteprenotailtuodolce{
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: 5rem;
-  background-color: #febd59;
-  color: black;
-  padding:.9rem 3.5rem;
-  cursor: pointer;
-  font-size: 1.3rem;
-  text-decoration: none; /* Rimuovi la sottolineatura */
-  font-weight: normal; /* Imposta lo stile del testo normale */
-}
-
 /* Nasconde il toggler del menu */
 header #toggler{
   display: none; /* Nasconde il toggler del menu */
@@ -132,7 +120,7 @@ header .fa-bars{
   display: flex;
   align-items: center;
   min-height: 100vh;
-  background: url("tortaalcioccolato.png") no-repeat center center fixed;
+  background: url("TORTA\ AL\ CIOCCOLATO\ 1.png") no-repeat center center fixed;
   background-size: cover;
   background-position: center;
   transition: background-image 1s ease; /* Aggiungi un'animazione di transizione */
@@ -179,22 +167,48 @@ header .fa-bars{
   text-align: center;
 }
 
+.pulsanteprenotailtuodolce{
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background-color: #febd59;
+  color: black;
+  padding:.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  text-decoration: none; /* Rimuovi la sottolineatura */
+  font-weight: 1000;
+  text-align: justify;
+}
+
 /* Media query per schermi fino a 991px */
 @media (max-width:991px) {
+
   html{
     font-size: 55%; /* Imposta la dimensione del testo al 55% */
   }
+
   header{
     padding: 2rem; /* Aggiunge padding all'header */
+  }
+
+  section{
+    padding: 2rem; /* Aggiunge padding all'header */
+  }
+
+  .homepage{
+    background-position: left;
   }
 }
 
 /* Media query per schermi fino a 768px */
 @media (max-width:768px) {
+
   /* Mostra l'icona del menu */
   header .fa-bars{
     display: block; /* Mostra l'icona del menu */
   }
+
   /* Stile per la barra di navigazione */
   header .elementibarranavigazione{
     position: absolute; /* Imposta la posizione assoluta */
@@ -230,10 +244,29 @@ header .fa-bars{
   header .fa-bars:active {
     background-color: transparent; /* Imposta lo sfondo trasparente */
   }
+
+  .popup {
+    font-size: 1.5rem;
+    padding: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .contenutohome h3{
+    font-size: 5rem;
+    background: url("TORTA\ AL\ CIOCCOLATO\ 1.png") no-repeat left left left fixed;
+  }
+
+  .contenutohome span{
+    font-size: 2.5rem;
+  }
 }
 
 /* Media query per schermi fino a 450px */
 @media (max-width:450px) {
+
   html{
     font-size: 50%; /* Imposta la dimensione del testo al 50% */
   }

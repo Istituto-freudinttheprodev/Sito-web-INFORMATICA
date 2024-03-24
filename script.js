@@ -9,12 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("popup").style.display = "none";
     document.body.style.overflow = "auto"; // Riabilita lo scroll dello sfondo quando il popup viene chiuso
   }
+
   // Lista di immagini di sfondo
   const backgroundImageList = [
-    "tortaalcioccolato.png",
-    "TORTA-AL-CIOCCOLATO-CON-CREMA-AL-MASCARPONE-E-NUTELLA.jpeg",
-    "16x9-455432p707452.jpg",
-    // Aggiungi qui altre immagini di sfondo
+    "TORTA AL CIOCCOLATO 1.png",
+    "TORTA AL CIOCCOLATO 2.jpg",
+    "PREPARAZIONE TORTA.png",
+    "TORTA NUZIALE 1.png",
+    "TORTA NUZIALE 2.png",
+    "TORTA PER LE FESTE.png",
+    "TORTA TIRAMISÙ.png",
   ];
 
   // Funzione per cambiare l'immagine di sfondo
@@ -24,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('homepage').style.backgroundImage = `url('${randomImage}')`;
   }
 
-  // Cambia l'immagine di sfondo della homepage ogni 10 secondi (10000 millisecondi)
-  setInterval(changeBackgroundImage, 10000);
+  // Cambia l'immagine di sfondo della homepage ogni 10 secondi (5000 millisecondi)
+  setInterval(changeBackgroundImage, 5000);
   
   // Cambia l'immagine di sfondo all'avvio della pagina
   changeBackgroundImage();
