@@ -32,17 +32,15 @@ body {
   background-color: rgb(255, 0, 0);
   color: #fff5f6;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 12px;
   text-align: center;
 }
 
 .bottonepopup{
-  font-size: 1rem; /* Imposta la dimensione del logo del menù */
+  font-size: 1rem; /* Imposta la dimensione del bottone */
   color: red; /* Imposta il colore del testo */
   border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
-  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
-  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
-  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
   cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
   border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
   background-color: white;
@@ -108,8 +106,8 @@ header .fa-bars{
   font-size: 3rem; /* Imposta la dimensione del logo del menù */
   color: black; /* Imposta il colore del testo */
   border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
-  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
-  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
+  /*Il padding è lo spazio tra il logo del menù e i suoi bordi. 
   Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
   cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
   border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
@@ -134,9 +132,7 @@ header .fa-bars{
   font-size: 4rem;
   color: black;
   border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
-  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
-  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
-  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
   background-color: #febd59;
   text-align: center;
 }
@@ -147,9 +143,7 @@ header .fa-bars{
   line-height: 1.5;
   color: black;
   border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
-  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
-  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
-  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
   background-color: #febd59;
   text-align: center;
 }
@@ -160,9 +154,7 @@ header .fa-bars{
   line-height: 1.5;
   color: black;
   border-radius: 5rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
-  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.
-  Il padding è lo spazio tra il logo del menù e i suoi bordi. 
-  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
+  padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
   background-color: #febd59;
   text-align: center;
 }
@@ -246,7 +238,7 @@ header .fa-bars{
   }
 
   .popup {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 150px;
     position: fixed;
     top: 50%;
@@ -261,6 +253,7 @@ header .fa-bars{
 
   .contenutohome span{
     font-size: 2.5rem;
+    text-align: center;
   }
 }
 

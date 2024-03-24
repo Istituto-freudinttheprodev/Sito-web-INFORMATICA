@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('homepage').style.backgroundImage = `url('${randomImage}')`;
   }
 
-  // Cambia l'immagine di sfondo della homepage ogni 10 secondi (5000 millisecondi)
-  setInterval(changeBackgroundImage, 5000);
+  // Cambia l'immagine di sfondo della homepage ogni 3 secondi (3000 millisecondi)
+  setInterval(changeBackgroundImage, 3000);
   
   // Cambia l'immagine di sfondo all'avvio della pagina
   changeBackgroundImage();
