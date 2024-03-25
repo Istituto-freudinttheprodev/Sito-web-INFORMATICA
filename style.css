@@ -21,7 +21,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
   transition: opacity 1s ease; /* Transizione per la comparsa del contenuto */
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .popup-content {
