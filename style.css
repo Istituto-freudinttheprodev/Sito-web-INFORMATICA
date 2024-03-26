@@ -159,7 +159,40 @@ header .fa-bars{
   text-align: center;
 }
 
-.pulsanteprenotailtuodolce{
+.titoloinizialeinformazioni{
+  text-align: center;
+  font-size: 4rem;
+  color: black;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.titoloinizialeinformazioni span{
+  color: black; 
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenitoredelvideo{
+  flex: 1 1 40rem;
+  position: relative;
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenitoredelvideo video{
+  width: 100%;
+  border: 1.5rem solid #febd59;
+  border-radius: .7rem;
+  box-shadow: 0 0.5rem 2rem black;
+}
+
+.pulsanteprenotailtuodolceealtro{
   display: inline-block;
   margin-top: 1rem;
   border-radius: 5rem;
@@ -214,6 +247,7 @@ header .fa-bars{
     display: block; /* Imposta gli elementi "a" su una riga separata */
     font-size: 2rem; /* Ingrossa il testo del link */
     margin-bottom: 30px; /* Aggiunge spazio inferiore tra i link */
+    margin-left: 7px
   }
 
   /* Mostra la barra di navigazione quando il toggler è selezionato */
@@ -262,5 +296,9 @@ header .fa-bars{
 
   html{
     font-size: 50%; /* Imposta la dimensione del testo al 50% */
+  }
+
+  .titoloinizialeinformazioni{
+    font-size: 3rem;
   }
 }
