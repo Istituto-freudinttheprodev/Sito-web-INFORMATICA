@@ -35,7 +35,7 @@
             <div class="elementibarranavigazione">
                 <a href="#" title="None" class="linknonsottolineati"></a>
                 <a href="#Home page" title="Home page" class="linknonsottolineati">HOME PAGE</a>
-                <a href="#La nostra storia" title="La nostra storia" class="linknonsottolineati">LA NOSTRA STORIA</a>
+                <a href="#La pasticceria" title="La pasticceria" class="linknonsottolineati">LA PASTICCERIA</a>
                 <a href="#Le nostre torte" title="Le nostre torte" class="linknonsottolineati">LE NOSTRE TORTE</a>
                 <a href="#Le nostre torte personalizzate" title="Le nostre torte personalizzate" class="linknonsottolineati">LE NOSTRE TORTE PERSONALIZZATE</a>
                 <a href="#Dove trovarci" title="Dove trovarci" class="linknonsottolineati">DOVE TROVARCI</a>
@@ -71,7 +71,7 @@
                 ACCESS TO AND USE OF THIS SITE IS SUBJECT TO YOUR FULL ACCEPTANCE OF THESE TERMS AND CONDITIONS.
             </strong>
         </p>
-        <button class="bottonepopup" onclick="closePopup()">Chiudi il popup</button>
+        <button class="bottonepopup" onclick="chiudipopup()">Chiudi il popup</button>
     </div>
 </div>
 <script src="script.js"></script>
@@ -85,18 +85,120 @@
     </div>
 </section>
 <section class="informazionipasticceria" id="informazionipasticceria">
-    <h1 class="titoloinizialeinformazioni"><span>La nostra</span> pasticceria!</h1>
+    <h1 class="titoloinizialeinformazioni"><span>La nostra</span> pasticceria, la nostra storia!</h1>
     <div class="contenutoinformazionipasticceria">
         <div class="contenitoredelvideo">
             <video src="video per home page sito pasticceria KiuGroove.mp4" loop autoplay muted controls class="videodelsito"></video>
-            <h3>best cose da scrivere da sistemare</h3>
         </div>
-        <div class="contenutoinformazionipasticceria">
-            <h3>perchè proprio io in sto sito</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum cupiditate amet debitis facilis quae iusto sunt voluptatum qui esse error, nostrum ipsam alias temporibus ratione velit consequatur placeat, enim asperiores?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maiores itaque laudantium soluta eos dolores. Natus placeat voluptatibus sequi officia. Vero repellendus quae sequi possimus quia. Ad exercitationem recusandae vero.</p>
+        <div class="contenutoinformazionipasticceria2">
+            <h3>La pasticceria</h3>
+            <p>Un’ampia selezione di torte classiche, da forno e moderne affianca una proposta di biscotti insieme a delle delizie al cioccolato.</p>
+            <p>Da buoni milanesi sappiamo fare ottimi panettoni, ma anche come soddisfare gli amanti del salato (no, non siamo una pasticceria normale).</p>
             <a href="#" class="pulsanteprenotailtuodolceealtro">Scopri di più!</a>
         </div>
+    </div>
+</section>
+<section class="contenitoreicone">
+
+    <div class="icone">
+        <ion-icon name="cart-outline"></ion-icon>
+        <div class="infoicone">
+            <h3>Consegna a domicilio gratuita!</h3>
+            <span>Per tutti gli ordini.</span>
+        </div>
+    </div>
+
+    <div class="icone">
+        <ion-icon name="cash-outline"></ion-icon>
+        <div class="infoicone">
+            <h3>Pagamento online o in loco!</h3>
+            <span>Per tutti gli ordini.</span>
+        </div>
+    </div>
+
+    <div class="icone">
+        <ion-icon name="gift-outline"></ion-icon>
+        <div class="infoicone">
+            <h3>Soddisfatto o rimborsato!</h3>
+            <span>Entro 30 giorni dal pagamento.</span>
+        </div>
+    </div>
+
+    <div class="icone">
+        <ion-icon name="logo-paypal"></ion-icon>
+        <div class="infoicone">
+            <h3>Pagamento con PayPal!</h3>
+            <span>Solo per gli ordini online.</span>
+        </div>
+    </div>
+</section>
+
+<section class="prodotti" id="prodotti">
+    <h1 class="titoloinizialeprodotti">Le nostre fantastiche <span>torte & molto altro</span></h1>
+    <div class="contenitorebox">
+        <div class="box">
+            <div class="immagineprodotto">
+                <img src="TORTA AL CIOCCOLATO 1.png" alt="Torta Sacher">
+                <div class="icone">
+                    <a href="#">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="contenutoprodotti">
+                <h3>Torta Sacher</h3>
+                <div class="prezzo">8,90€ (a fetta) <span>12,90€ (a fetta)</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="immagineprodotto">
+                <img src="TORTA AL CIOCCOLATO 2.jpg" alt="Torta Al Cioccolato">
+                <div class="icone">
+                    <a href="#">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="contenutoprodotti">
+                <h3>Torta Al Cioccolato</h3>
+                <div class="prezzo">8,90€ (a fetta) <span>12,90€ (a fetta)</span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="immagineprodotto">
+                <img src="TORTA NUZIALE 1.png" alt="Torta Nuziale 1">
+                <div class="icone">
+                    <a href="#">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="share-social-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="contenutoprodotti">
+                <h3>Torta Nuziale 1</h3>
+                <div class="prezzo">8,90€ (a fetta) <span>12,90€ (a fetta)</span></div>
+            </div>
+        </div>
+
     </div>
 </section>
 </body>

@@ -79,7 +79,7 @@ body {
 
 .linknonsottolineati {
   color: inherit; /* Utilizza il colore del testo del padre */
-  text-decoration: none; /* Rimuovi la sottolineatura */
+  text-decoration: none; /* Rimuove la sottolineatura */
   font-weight: normal; /* Imposta lo stile del testo normale */
 }
 
@@ -190,6 +190,58 @@ header .fa-bars{
   border: 1.5rem solid #febd59;
   border-radius: .7rem;
   box-shadow: 0 0.5rem 2rem black;
+  height: 100%;
+  object-fit: cover;
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenutoinformazionipasticceria2 h3{
+  font-size: 3rem;
+  color: black
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenutoinformazionipasticceria2 p{
+  font-size: 1.5rem;
+  color: black;
+  line-height: 1.5;
+}
+
+.contenitoreicone{
+  background: #febd59;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contenitoreicone .icone{
+  background: beige;
+  border: 0.1rem solid rgba(0,0,0,.5);
+  border-radius: .7rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 25rem;
+}
+
+.contenitoreicone .icone ion-icon{
+  height: 5rem;
+  margin-right: 2rem;
+  font-size: 3rem; /* Modifica la dimensione dell'icona */
+}
+
+.contenitoreicone .icone h3{
+  color: black;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  top: -5%;
+  margin-top: 0; /* Rimuove lo spazio superiore */
+}
+
+.contenitoreicone .icone span{
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 0; /* Rimuove lo spazio superiore */
 }
 
 .pulsanteprenotailtuodolceealtro{
@@ -201,7 +253,7 @@ header .fa-bars{
   padding:.9rem 3.5rem;
   cursor: pointer;
   font-size: 2rem;
-  text-decoration: none; /* Rimuovi la sottolineatura */
+  text-decoration: none; /* Rimuove la sottolineatura */
   font-weight: 1000;
   text-align: justify;
 }
@@ -286,8 +338,19 @@ header .fa-bars{
   }
 
   .contenutohome span{
+    color: black;
     font-size: 2.5rem;
     text-align: center;
+  }
+
+  .contenitoreicone .icone h3{
+    color: black;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .contenitoreicone .icone span{
+    front-size: 1.7rem;
   }
 }
 
