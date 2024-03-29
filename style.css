@@ -118,7 +118,7 @@ header .fa-bars{
   display: flex;
   align-items: center;
   min-height: 100vh;
-  background: url("TORTA\ AL\ CIOCCOLATO\ 1.png") no-repeat center center fixed;
+  background: url("TORTA SACHER.png") no-repeat center center fixed;
   background-size: cover;
   background-position: center;
   transition: background-image 1s ease; /* Aggiungi un'animazione di transizione */
@@ -194,6 +194,26 @@ header .fa-bars{
   object-fit: cover;
 }
 
+.informazionipasticceria .contenutoinformazionipasticceria .contenitoredelvideo .videodelsito:-webkit-full-screen{
+  border: none;
+  border-radius: 0%;
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenitoredelvideo .videodelsito:-moz-full-screen{
+  border: none;
+  border-radius: 0%;
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenitoredelvideo .videodelsito:-ms-fullscreen{
+  border: none;
+  border-radius: 0%;
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenitoredelvideo .videodelsito:fullscreen{
+  border: none;
+  border-radius: 0%;
+}
+
 .informazionipasticceria .contenutoinformazionipasticceria .contenutoinformazionipasticceria2 h3{
   font-size: 3rem;
   color: black
@@ -203,6 +223,20 @@ header .fa-bars{
   font-size: 1.5rem;
   color: black;
   line-height: 1.5;
+}
+
+/* Quando il video è in modalità a schermo intero */
+.videodelsito:-webkit-full-screen {
+  border: none; /* Nascondi il bordo */
+}
+.videodelsito:-moz-full-screen {
+  border: none; /* Nascondi il bordo */
+}
+.videodelsito:-ms-fullscreen {
+  border: none; /* Nascondi il bordo */
+}
+.videodelsito:fullscreen {
+  border: none; /* Nascondi il bordo */
 }
 
 .contenitoreicone{
@@ -321,54 +355,6 @@ header .fa-bars{
   /* Stile quando l'icona è attiva (premuto) */
   header .fa-bars:active {
     background-color: transparent; /* Imposta lo sfondo trasparente */
-  }
-
-  .prodotti .titoloinizialeprodotti{
-    text-align: center;
-  }
-
-  .prodotti .contenitorebox{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-
-  .prodotti .titoloinizialeprodotti .contenitorebox .box{
-    flex: 1 1 30rem;
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
-    border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0,.1);
-    position: relative;
-  }
-
-  .prodotti .contenitorebox .box .immagineprodotto{
-    position: relative;
-    text-align: center;
-    padding-top: 2rem;
-    overflow: hidden;
-  }
-
-  .prodotti .titoloinizialeprodotti .contenitorebox .box .immagineprodotto img{
-    height: 25rem;
-  }
-
-  .prodotti .titoloinizialeprodotti .contenitorebox .box:hover .immagineprodotto img{
-    transform: scale(1.1);
-  }
-  
-  .prodotti .titoloinizialeprodotti .contenitorebox .box .immagineprodotto .icone{
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    display: flex;
-  }
-
-  .prodotti .titoloinizialeprodotti .contenitorebox .box .immagineprodotto .icone a{
-    height: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    width: 50%;
-    background-color: #febd59;
-    color: black;
   }
 
   .popup {

@@ -12,11 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Lista di immagini di sfondo
   const listaimmaginidisfondo = [
-    "TORTA AL CIOCCOLATO 1.png",
-    "TORTA AL CIOCCOLATO 2.jpg",
+    "TORTA SACHER.png",
+    "TORTA AL DOPPIO CIOCCOLATO.jpg",
     "PREPARAZIONE TORTA.png",
     "TORTA NUZIALE 1.png",
     "TORTA NUZIALE 2.png",
+    "TORTA PARADISO.jpg",
     "TORTA PER LE FESTE.png",
     "TORTA TIRAMISÙ.png",
   ];
