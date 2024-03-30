@@ -22,6 +22,7 @@ body {
   backdrop-filter: blur(3px); /* Aggiunge l'effetto di sfocatura */
   transition: opacity 1s ease; /* Transizione per la comparsa del contenuto */
   font-size: 1rem;
+  overflow: auto;
 }
 
 .popup-content {
@@ -358,7 +359,7 @@ header .fa-bars{
   }
 
   .popup {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 150px;
     position: fixed;
     top: 50%;
