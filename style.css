@@ -293,6 +293,61 @@ header .fa-bars{
   text-align: justify;
 }
 
+.lenostretorte{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.lenostretorte .titoloinizialelenostretorte{
+  font-size: 3.5rem;
+  color: black;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.lenostretorte .contenitorelenostretorte{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.lenostretorte .contenitorelenostretorte .tortedisponibili{
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #febd59;
+  border-radius: .7rem;
+  box-shadow: 0 .5 1rem rgba(0, 0, 0, 0.1);
+  outline: .1rem solid;
+  cursor: pointer;
+}
+
+.lenostretorte .contenitorelenostretorte .tortedisponibili:hover{
+  outline: 0.2rem solid black;
+  outline-offset: 0;
+}
+
+.lenostretorte .contenitorelenostretorte .tortedisponibili img{
+  border-radius: .7rem;
+}
+
+.lenostretorte .contenitorelenostretorte .tortedisponibili h3{
+  padding: .5rem 0;
+  font-size: 2rem;
+  color: black;
+}
+
+.lenostretorte .contenitorelenostretorte .tortedisponibili:hover h3{
+  color: beige;
+}
+
+.lenostretorte .contenitorelenostretorte .tortedisponibili .prezzo{
+  font-size: 1.5rem;
+  color: black;
+}
+
 /* Media query per schermi fino a 991px */
 @media (max-width:991px) {
 
