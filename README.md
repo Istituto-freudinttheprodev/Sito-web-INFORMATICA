@@ -1,4 +1,4 @@
-# SITO-WEB-INFORMATICA
+# Sito web della pasticceria Kiugroove (attività commerciale fittizia)
 
 Il sito è stato programmato da Matteo (il sottoscritto) in HTML, CSS e JavaScript.
 Tutti codici e i file multimediali inseriti nel sito come ad esempio foto o video sono inseriti nella Repository.
