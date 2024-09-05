@@ -5,7 +5,7 @@ Tutti codici e i file multimediali inseriti nel sito come ad esempio foto o vide
 
 **RICORDO A TUTTI CHE IL SITO CREATO È DEL TUTTO FITTIZIO E QUINDI OGNI RIFERIMENTO PRESENTE NEL SITO È DA DIRSI NON VERO**
 
-Link al sito web: https://istituto-freudinttheprodev.github.io/Sito-web-INFORMATICA/
+Link al sito web: https://istituto-freudinttheprodev.github.io/Sito-web-lavoro-di-gruppo-INFORMATICA/
 
 Ringrazio Github Pages, questo bellisimo servizio di Github, per l'hosting del sito
 
