@@ -1,17 +1,93 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+body{
+  font-family: "Montserrat", sans-serif;
   background-color: beige;
+  user-select: none;
 }
 
-/* Disabilita l'effetto di feedback sul clic su i dispositi mobile come tablet e telefoni*/
-* {
+/* Disabilita l'effetto di feedback della pressione di un pulsante in azzurro su i dispositi mobile come tablet e telefoni */
+*{
   -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */
   -webkit-touch-callout: none; /* Impedisce la visualizzazione del menu di azione a lungo tocco */
   -ms-touch-action: manipulation; /* Imposta il comportamento del tocco */
   touch-action: manipulation; /* Imposta il comportamento del tocco */
 }
 
-.popup {
+/* Disabilita il trascinamento delle immagini in una altra scheda (per togliere la possibilità di copiarle) */
+img {
+  -webkit-user-drag: none; /* Per browser WebKit come Chrome e Safari */
+  user-drag: none; /* Per Firefox */
+}
+
+/* Esempio di palette personalizzata per il banner dei cookie */
+.palette-custom {
+  --banner-background: #febd59; /* Colore di sfondo del banner */
+  --banner-text: black; /* Colore del testo del banner */
+  --button-background: #febd59; /* Colore di sfondo del pulsante */
+  --button-text: black; /* Colore del testo del pulsante */
+}
+
+.banner {
+  background-color: var(--banner-background);
+  color: var(--banner-text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.banner button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+}
+
+.banner a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.banner a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  background: #febd59; /* Gradiente di sfondo */
+  border-top: 3px solid beige; /* Bordi del banner */
+  color: beige; /* Colore del testo */
+  font-family: "Montserrat", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; /* Transizione per il colore dello sfondo, del testo e del bordo */
+  /* Stile del banner con animazione di fade-in */
+  animation: animazionedidissolvenzadelbanner 1s ease-out; /* Applica questo tipo di animazione con durata di 1 secondo e un'uscita graduale */
+}
+
+.banner:hover {
+  background: beige; /* Gradiente di sfondo */
+  border-top: 3px solid #febd59; /* Bordi del banner */
+  color: #febd59; /* Colore del testo */
+}
+
+/* Definizione dell'animazione "animazionedidissolvenzadelbanner" indicata sopra */
+@keyframes animazionedidissolvenzadelbanner {
+  from { 
+      opacity: 0; /* Inizia con il banner completamente trasparente */
+  }
+  to { 
+      opacity: 1; /* Termina con il banner completamente visibile */
+  }
+}
+
+.contatoreprodottipreferiti {
+  color: black;
+  font-weight: bold;
+}
+
+.contatoreprodottishoppingbag {
+  color: black;
+  font-weight: bold;
+}
+
+.popup{
   display: none;
   position: fixed;
   top: 0;
@@ -25,7 +101,7 @@ body {
   overflow: auto;
 }
 
-.popup-content {
+.popup-content{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -55,40 +131,40 @@ body {
   font-size: 140%;
 }
 
-.marchio {
+.marchio{
   width: 200px;
   height: auto;
 }
 
-.barradinavigazione {
+.barradinavigazione{
   display: flex;
   align-items: center;
 }
 
-.barradinavigazione div {
+.barradinavigazione div{
   margin-left: auto;
 }
 
-.barradinavigazione a {
+.barradinavigazione a{
   margin-right: 38px;
 }
 
-.logo {
+.logo{
   width: 20px;
   height: 20px;
 }
 
-.linknonsottolineati {
+.linknonsottolineati{
   color: inherit; /* Utilizza il colore del testo del padre */
   text-decoration: none; /* Rimuove la sottolineatura */
   font-weight: normal; /* Imposta lo stile del testo normale */
 }
 
-.linknonsottolineati:hover {
+.linknonsottolineati:hover{
   font-weight: bold; /* Imposta lo stile del testo in grassetto */
 }
 
-ion-icon {
+ion-icon{
   font-size: 21px;
   color: black;
 }
@@ -102,17 +178,15 @@ header #toggler{
   display: none; /* Nasconde il toggler del menu */
 }
 
-/* Stile per l'icona del menu (bars) */
-header .fa-bars{
-  font-size: 3rem; /* Imposta la dimensione del logo del menù */
+/* Stile per l'icona del menù */
+header .menùdispositivimobili{
+  font-size: 3rem; /* Imposta la dimensione della icona del menù */
   color: black; /* Imposta il colore del testo */
-  border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
   padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
-  /*Il padding è lo spazio tra il logo del menù e i suoi bordi. 
-  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore dell'elemento, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro dell'elemento. */
-  cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
-  border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
-  display: none; /* Nasconde l'icona del menu */
+  /*Il padding è lo spazio tra l'icona del menù e i suoi bordi. 
+  Il primo valore (.5rem) rappresenta il padding per il lato superiore e inferiore della icona, mentre il secondo valore (1.5rem) rappresenta il padding per il lato destro e sinistro della icona. */
+  cursor: pointer; /* Imposta il cursore quando si va sopra l'icona del menù */
+  display: none; /* Nasconde l'icona del menu (perchè adesso non va mostrata ma dopo sì) */
 }
 
 .homepage{
@@ -122,7 +196,7 @@ header .fa-bars{
   background: url("TORTA SACHER.png") no-repeat center center fixed;
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease; /* Aggiungi un'animazione di transizione */
+  transition: background-image 1s ease; /* Aggiunge un'animazione di transizione */
 }
 
 .contenutohome{
@@ -227,17 +301,17 @@ header .fa-bars{
 }
 
 /* Quando il video è in modalità a schermo intero */
-.videodelsito:-webkit-full-screen {
-  border: none; /* Nascondi il bordo */
+.videodelsito:-webkit-full-screen{
+  border: none; /* Nasconde il bordo */
 }
-.videodelsito:-moz-full-screen {
-  border: none; /* Nascondi il bordo */
+.videodelsito:-moz-full-screen{
+  border: none; /* Nasconde il bordo */
 }
-.videodelsito:-ms-fullscreen {
-  border: none; /* Nascondi il bordo */
+.videodelsito:-ms-fullscreen{
+  border: none; /* Nasconde il bordo */
 }
-.videodelsito:fullscreen {
-  border: none; /* Nascondi il bordo */
+.videodelsito:fullscreen{
+  border: none; /* Nasconde il bordo */
 }
 
 .contenitoreicone{
@@ -299,13 +373,20 @@ header .fa-bars{
   padding: 3rem 2rem;
 }
 
-.lenostretorte .titoloinizialelenostretorte{
+.lenostretorte .introduzionecontenitorelenostretorte h3{
   font-size: 3.5rem;
   color: black;
   margin-bottom: 3rem;
-  text-transform: uppercase;
   text-align: center;
   margin-top: 1rem;
+}
+
+.lenostretorte .introduzionecontenitorelenostretorte p{
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 2rem;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .lenostretorte .contenitorelenostretorte{
@@ -343,13 +424,165 @@ header .fa-bars{
   color: beige;
 }
 
-.lenostretorte .contenitorelenostretorte .tortedisponibili .prezzo{
+.lenostretorte .contenitorelenostretorte .tortedisponibili .prezzotorta{
   font-size: 1.5rem;
   color: black;
 }
 
+.previewtortedisponibili{
+  position: fixed;
+  top: 0; left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewtortedisponibili .preview{
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  background-color: beige;
+  position: relative;
+  margin: 2rem;
+  width: 70rem;
+  border-radius: .7rem;
+  max-height: 50rem; /* Limita l'altezza */
+  overflow-y: auto; /* Aggiunge la barra di scorrimento verticale all'interno */
+}
+
+.previewtortedisponibili .preview.attivo{
+  display: inline-block;
+}
+
+.previewtortedisponibili .preview img{
+  height: 30rem;
+  border-radius: .7rem;
+}
+
+.previewtortedisponibili .preview .pulsantechiusurapreview{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  color: #444;
+  font-size: 60px; /* Regola la dimensione dell'icona */
+  transition: transform 0.3s ease; /* Aggiunge una transizione fluida per la trasformazione */
+}
+
+.previewtortedisponibili .preview .pulsantechiusurapreview:hover{
+  transform: rotate(90deg);
+}
+
+.previewtortedisponibili .preview h3{
+  color: black;
+  padding: .1rem 0;
+  font-size: 2.5rem;
+}
+
+.previewtortedisponibili .preview .stelleperlarecensione{
+  padding: .1rem 0;
+  font-size: 1.7rem;
+}
+
+.previewtortedisponibili .preview .stelleperlarecensione ion-icon{
+  color: #febd59;
+  font-size: 1.7rem;
+}
+
+.previewtortedisponibili .preview .stelleperlarecensione span{
+  color: black;
+}
+
+.previewtortedisponibili .preview p{
+  line-height: 1.9;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.previewtortedisponibili .preview .previewprezzotorta{
+  padding: 1rem 0;
+  font-size: 2.3rem;
+  color: black;
+}
+
+.previewtortedisponibili .preview .pulsantiopzioniprewiew{
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.previewtortedisponibili .preview .pulsantiopzioniprewiew a{
+  flex: 1 1 16rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: black;
+  border: 0.2rem solid black;
+  text-decoration: none; /* Rimuove la sottolineatura */
+  border-radius: .7rem;
+}
+
+.previewtortedisponibili .preview .pulsantiopzioniprewiew a.pulsanteaggiungiallashoppingbag{
+  background: #febd59;
+  color: beige;
+  transition: background 0.3s, color 0.3s;
+}
+
+.previewtortedisponibili .preview .pulsantiopzioniprewiew a.pulsanteaggiungiallashoppingbag:hover{
+  background: beige;
+  color: #febd59;
+}
+
+.previewtortedisponibili .preview .pulsantiopzioniprewiew a.pulsanteaggiungiaipreferiti{
+  background: #febd59;
+  color: beige;
+  transition: background 0.3s, color 0.3s;
+}
+
+.previewtortedisponibili .preview .pulsantiopzioniprewiew a.pulsanteaggiungiaipreferiti:hover{
+  background: beige;
+  color: #febd59;
+}
+
+/* Definisce l'animazione per l'apertura della preview delle torte disponibili */
+@keyframes animazionedientratapreviewtortedisponibili {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Classe che applica l'animazione all'apertura della preview delle torte disponibili */
+.animazionedientratapreviewtortedisponibili {
+  animation: animazionedientratapreviewtortedisponibili 0.5s ease forwards; /* Viene indicato prima la durata e poi il tipo di animazione */
+}
+
+/* Definisce l'animazione per la chiusura della preview delle torte disponibili */
+@keyframes animazionediuscitapreviewtortedisponibili {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Classe che applica l'animazione alla chiusura della preview delle torte disponibili */
+.animazionediuscitapreviewtortedisponibili {
+  animation: animazionediuscitapreviewtortedisponibili 0.5s ease forwards; /* Viene indicato prima la durata e poi il tipo di animazione */
+}
+
 /* Media query per schermi fino a 991px */
-@media (max-width:991px) {
+@media (max-width:991px){
 
   html{
     font-size: 55%; /* Imposta la dimensione del testo al 55% */
@@ -366,13 +599,17 @@ header .fa-bars{
   .homepage{
     background-position: left;
   }
+
+  .elementibarranavigazione a{
+    font-size: 2rem; /* Ingrandisce il testo del link */
+  }
 }
 
 /* Media query per schermi fino a 768px */
-@media (max-width:768px) {
+@media (max-width:768px){
 
-  /* Mostra l'icona del menu */
-  header .fa-bars{
+  /* Mostra l'icona del menù */
+  header .menùdispositivimobili{
     display: block; /* Mostra l'icona del menu */
   }
 
@@ -380,27 +617,28 @@ header .fa-bars{
   header .elementibarranavigazione{
     position: absolute; /* Imposta la posizione assoluta */
     top:20%; left:0; right:0; /* Imposta la posizione in alto, a sinistra e a destra */
-    background: #fff5f6; /* Imposta il colore di sfondo */
+    background: #febd59; /* Imposta il colore di sfondo */
     border-top: .1rem solid rgba(0,0,0,.1); /* Imposta lo stile del bordo superiore */
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 ); /* Nasconde la barra di navigazione */
+    color: black;
   }
 
-  .elementibarranavigazione a {
+  .elementibarranavigazione a{
     display: block; /* Imposta gli elementi "a" su una riga separata */
-    font-size: 2rem; /* Ingrossa il testo del link */
+    font-size: 2rem; /* Ingrandisce il testo del link */
     margin-bottom: 30px; /* Aggiunge spazio inferiore tra i link */
-    margin-left: 7px
+    margin-left: 7px;
   }
 
   /* Mostra la barra di navigazione quando il toggler è selezionato */
   header #toggler:checked ~ .elementibarranavigazione{
     clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Mostra la barra di navigazione */
-    transition: clip-path 0.70s ease; /* Aggiungi una transizione con durata di 0.70 secondi e un effetto di ease */
+    transition: clip-path 0.70s ease; /* Aggiunge una transizione con durata di 0.70 secondi e un effetto di ease */
   }
 
   /* Nascondi la barra di navigazione quando il toggler non è selezionato */
-  header #toggler:not(:checked) ~ .elementibarranavigazione {
-  transition: clip-path 0.70s ease; /* Applica la stessa transizione quando il menù viene chiuso */
+  header #toggler:not(:checked) ~ .elementibarranavigazione{
+    transition: clip-path 0.70s ease; /* Applica la stessa transizione quando il menù viene chiuso */
   }
 
   /* Stile per i link nella barra di navigazione */
@@ -408,12 +646,22 @@ header .fa-bars{
     display block; /* Imposta i link come blocchi */
   }
 
-  /* Stile quando l'icona è attiva (premuto) */
-  header .fa-bars:active {
+  /* Stile quando l'icona del menù è attiva (premuto) */
+  header .menùdispositivimobili:active{
     background-color: transparent; /* Imposta lo sfondo trasparente */
   }
 
-  .popup {
+  .contatoreprodottipreferiti {
+    color: black;
+    font-weight: bold;
+  }
+
+  .contatoreprodottishoppingbag {
+    color: black;
+    font-weight: bold;
+  }
+
+  .popup{
     font-size: 1.5rem;
     padding: 150px;
     position: fixed;
@@ -442,10 +690,19 @@ header .fa-bars{
   .contenitoreicone .icone span{
     font-size: 1.7rem;
   }
+
+  .lenostretorte .contenitorelenostretorte .tortedisponibili img{
+    height: 20rem;
+    border-radius: .7rem;
+  }
+
+  .previewtortedisponibili .preview img {
+    height: 15rem;
+  }
 }
 
 /* Media query per schermi fino a 450px */
-@media (max-width:450px) {
+@media (max-width:450px){
 
   html{
     font-size: 50%; /* Imposta la dimensione del testo al 50% */
@@ -453,5 +710,14 @@ header .fa-bars{
 
   .titoloinizialeinformazioni{
     font-size: 3rem;
+  }
+
+  .lenostretorte .contenitorelenostretorte .tortedisponibili img{
+    height: 20rem;
+    border-radius: .7rem;
+  }
+
+  .previewtortedisponibili .preview img {
+    height: 15rem;
   }
 }

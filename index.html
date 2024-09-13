@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KiuGroove: Sweeter than sweets</title>
+        <title>Pasticceria KiuGroove: Sweeter than sweets</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -19,32 +19,40 @@
     <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
 <script>
     window.start.init({
-        Palette: "palette7",
+        Palette: "palette-custom",
         Mode: "banner bottom",
         Theme: "classic",
         Message: "Questo sito utilizza i cookie per assicurarti una migliore esperienza sul nostro sito, chiudendo questo banner accetti l'utilizzo di quest'ultimi.",
         ButtonText: "Chiudi il banner",
-        LinkText: '<a href="Policy.html" target="_blank">(Informativa sulla Privacy & Policy)</a>',
+        LinkText: '<a href="Privacy&Policy.html" target="_blank">(Informativa sulla Privacy & Policy)</a>',
         Time: "3"
     });
 </script>
     <header>
         <nav class="barradinavigazione">
             <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
+            <label for="toggler" class="menùdispositivimobili" title="Menù del sito">
+                <ion-icon name="menu-outline"></ion-icon>
+            </label>
             <img class="marchio" src="Logo KiuGroove senza sfondo.png" title="Il nostro logo">
             <div class="elementibarranavigazione">
                 <a href="#" title="None" class="linknonsottolineati"></a>
                 <a href="#Home page" title="Home page" class="linknonsottolineati">HOME PAGE</a>
                 <a href="#La pasticceria" title="La pasticceria" class="linknonsottolineati">LA PASTICCERIA</a>
                 <a href="#Le nostre torte" title="Le nostre torte" class="linknonsottolineati">LE NOSTRE TORTE</a>
-                <a href="#Le nostre torte personalizzate" title="Le nostre torte personalizzate" class="linknonsottolineati">LE NOSTRE TORTE PERSONALIZZATE</a>
+                <a href="#Le recensioni dei clienti" title="Le recensioni dei clienti" class="linknonsottolineati">LE RECENSIONI DEI CLIENTI</a>
                 <a href="#Dove trovarci" title="Dove trovarci" class="linknonsottolineati">DOVE TROVARCI</a>
-                <a href="https://github.com/Istituto-freudinttheprodev/SITO-WEB-INFORMATICA/tree/main" target="_blank" title="Il codice del sito" class="linknonsottolineati">IL CODICE DEL SITO</a>
+                <a href="https://github.com/Istituto-freudinttheprodev/Sito-web-lavoro-di-gruppo-INFORMATICA/tree/main" target="_blank" title="Il codice del sito" class="linknonsottolineati">IL CODICE DEL SITO</a>
                 <a href="#Contattaci" title="Contattaci" class="linknonsottolineati">CONTATTACI</a>    
-                <a href="Preferiti.html" target="_blank"><ion-icon name="heart-outline" title="Preferiti" class="linknonsottolineati" id="preferiti"></ion-icon></a>
-                <a href="Shoppingbag.html" target="_blank"><ion-icon name="cart-outline" title="Shopping Bag" class="linknonsottolineati" id="shoppingbag"></ion-icon></a>  
-                <a href="Login.html" target="_blank"><ion-icon name="person-circle-outline" title="Login/Logout" class="linknonsottolineati" id="login"></ion-icon></a> 
+                <a href="Preferiti.html" target="_blank" style="text-decoration: none;">
+                    <ion-icon name="heart-outline" title="Preferiti" class="linknonsottolineati" id="preferiti"></ion-icon>
+                    <span id="contatoreprodottipreferiti" class="contatoreprodottipreferiti">0</span>
+                </a>
+                <a href="Shoppingbag.html" target="_blank" class="shopping-bag-icon" style="text-decoration: none;">
+                    <ion-icon name="cart-outline" title="Shopping Bag" class="linknonsottolineati" id="shoppingbag"></ion-icon>
+                    <span id="contatoreprodottishoppingbag" class="contatoreprodottishoppingbag">0</span>
+                </a>
+                <a href="Login.html" target="_blank"><ion-icon name="log-in-outline" title="Login/Logout" class="linknonsottolineati" id="login/logout"></ion-icon></a> 
             </div>
         </nav>
     </header>
@@ -75,6 +83,7 @@
         <button class="bottonepopup" onclick="chiudipopup()">Chiudi il popup</button>
     </div>
 </div>
+
 <script src="script.js"></script>
 
 <section class="homepage" id="homepage">
@@ -138,52 +147,208 @@
 </section>
 
 <section class="lenostretorte" id="lenostretorte">
-    <h3 class="titoloinizialelenostretorte">Le nostre torte</h3>
+    <div class="introduzionecontenitorelenostretorte">
+        <h3>Le nostre torte</h3>
+        <p>Qui sotto puoi trovare tutte le torte che noi realizziamo con la possibilità di aggiungerle ai Preferiti o alla Shopping Bag</p>
+        <p>N.B.: Su qualche device la visualizzazione delle immagini potrebbe non essere perfetta e potrebbero esserci delle immagini fuori dai bordi. Per risolvere il problema, prova a mettere a schermo intero o ad ingradire la finestra</p>    
+    </div>
     <div class="contenitorelenostretorte">
-
-        <div class="tortedisponibili" data-name="p-1">
+        <div class="tortedisponibili" numerodellatorta="t-1">
             <img src="TORTA BOX SACHER.png" alt="Torta sacher" title="Torta sacher">
             <h3>TORTA SACHER</h3>
-            <div class="prezzo">9,99€ (a fetta)</div>
+            <div class="prezzotorta">9,99€ (a fetta)</div>
         </div>
 
-        <div class="tortedisponibili" data-name="p-2">
+        <div class="tortedisponibili" numerodellatorta="t-2">
             <img src="TORTA BOX AL DOPPIO CIOCCOLATO.png" alt="Torta al doppio cioccolato" title="Torta al doppio cioccolato">
             <h3>TORTA AL DOPPIO CIOCCOLATO</h3>
-            <div class="prezzo">7,99€ (a fetta)</div>
+            <div class="prezzotorta">7,99€ (a fetta)</div>
         </div>
 
-        <div class="tortedisponibili" data-name="p-3">
+        <div class="tortedisponibili" numerodellatorta="t-3">
             <img src="TORTA BOX NUZIALE.png" alt="Torta nuziale" title="Torta nuziale">
             <h3>TORTA NUZIALE (PERSONALIZZABILE)</h3>
-            <div class="prezzo">499,99€ (senza le preferenze)</div>
+            <div class="prezzotorta">499,99€ (senza le preferenze)</div>
         </div>
 
-        <div class="tortedisponibili" data-name="p-4">
+        <div class="tortedisponibili" numerodellatorta="t-4">
             <img src="TORTA BOX PER LE FESTE.png" alt="Torta per le feste" title="Torta per le feste">
             <h3>TORTA PER LE FESTE (PERSONALIZZABILE)</h3>
-            <div class="prezzo">99,99€ (senza le preferenze)</div>
+            <div class="prezzotorta">99,99€ (senza le preferenze)</div>
         </div>
 
-        <div class="tortedisponibili" data-name="p-5">
+        <div class="tortedisponibili" numerodellatorta="t-5">
             <img src="TORTA BOX TIRAMISÙ.png" alt="Tiramisù" title="Tiramisù">
             <h3>TIRAMISÙ</h3>
-            <div class="prezzo">12,99€ (a fetta)</div>
+            <div class="prezzotorta">12,99€ (a fetta)</div>
         </div>
 
-        <div class="tortedisponibili" data-name="p-5">
+        <div class="tortedisponibili" numerodellatorta="t-6">
             <img src="TORTA BOX PARADISO.jpg" alt="Torta paradiso" title="Torta paradiso">
             <h3>TORTA PARADISO</h3>
-            <div class="prezzo">5,99€ (a fetta)</div>
+            <div class="prezzotorta">5,99€ (a fetta)</div>
         </div>
 
     </div>
 
     <div class="previewtortedisponibili">
-        <div class="preview">
-            
+
+        <div class="preview" numerodellatortapreview="t-1">
+            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <img src="TORTA BOX SACHER.png" alt="Torta Sacher" title="Torta Sacher">
+            <h3>TORTA SACHER</h3>
+            <div class="stelleperlarecensione">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+                <span>(253 recensioni)</span>
+                <p>La nostra torta Sacher è il risultato di una cura meticolosa, dalla selezione degli ingredienti al processo di preparazione, fino alla sua presentazione impeccabile. Ogni fetta è un invito a gustare il connubio perfetto di tradizione e creatività che solo noi possiamo offrire. Sì, questa è la nostra torta Sacher, un'icona della pasticceria che conquista i cuori e i palati di chiunque abbia il privilegio di assaggiarla.</p>
+                <div class="previewprezzotorta">9,99€ (a fetta)</div>
+                <div class="pulsantiopzioniprewiew">
+                    <a href="#" class="pulsanteaggiungiallashoppingbag" onclick="nuovoprodottoshoppingbag()">Aggiungi alla Shopping Bag</a>
+                    <a href="#" class="pulsanteaggiungiaipreferiti" onclick="nuovoprodottopreferiti()">Aggiungi ai preferiti</a>
+                </div>
+            </div>
         </div>
+
+        <div class="preview" numerodellatortapreview="t-2">
+            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <img src="TORTA BOX AL DOPPIO CIOCCOLATO.png" alt="Torta al doppio cioccolato" title="Torta al doppio cioccolato">
+            <h3>TORTA AL DOPPIO CIOCCOLATO</h3>
+            <div class="stelleperlarecensione">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+                <span>(158 recensioni)</span>
+                <p>La nostra torta al doppio cioccolato è il risultato della nostra passione per l'eccellenza culinaria, dalla scelta dei migliori cacao al fondente alla preparazione artigianale di ogni singolo strato. Ogni morso è un'esperienza indulgente, un viaggio attraverso la ricchezza del cioccolato che avvolge i sensi e delizia il palato. Questa è la nostra torta al doppio cioccolato, un capolavoro che porta con sé il marchio distintivo della nostra maestria e dedizione alla perfezione dolce.</p>
+                <div class="previewprezzotorta">7,99€ (a fetta)</div>
+                <div class="pulsantiopzioniprewiew">
+                    <a href="#" class="pulsanteaggiungiallashoppingbag" onclick="nuovoprodottoshoppingbag()">Aggiungi alla Shopping Bag</a>
+                    <a href="#" class="pulsanteaggiungiaipreferiti" onclick="nuovoprodottopreferiti()">Aggiungi ai preferiti</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview" numerodellatortapreview="t-3">
+            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <img src="TORTA BOX NUZIALE.png" alt="Torta nuziale" title="Torta nuziale">
+            <h3>TORTA NUZIALE (PERSONALIZZABILE)</h3>
+            <div class="stelleperlarecensione">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <span>(309 recensioni)</span>
+                <p>La nostra torta nuziale è molto più di un semplice dessert: è un simbolo di amore eterno e promesse di vita insieme. Ogni fetta racconta una storia di speranza e felicità, incorniciata dalla gioia di un giorno speciale. Questa è la nostra torta nuziale, un'opera d'arte culinaria che celebra l'inizio di una nuova vita insieme, con dolcezza e gusto senza pari.</p>
+                <div class="previewprezzotorta">499,99€ (senza le preferenze)</div>
+                <div class="pulsantiopzioniprewiew">
+                    <a href="#" class="pulsanteaggiungiallashoppingbag" onclick="nuovoprodottoshoppingbag()">Aggiungi alla Shopping Bag</a>
+                    <a href="#" class="pulsanteaggiungiaipreferiti" onclick="nuovoprodottopreferiti()">Aggiungi ai preferiti</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview" numerodellatortapreview="t-4">
+            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <img src="TORTA BOX PER LE FESTE.png" alt="Torta per le feste" title="Torta per le feste">
+            <h3>TORTA PER LE FESTE (PERSONALIZZABILE)</h3>
+            <div class="stelleperlarecensione">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <span>(53 recensioni)</span>
+                <p>La nostra torta per le feste è molto più di un semplice dolce: è un simbolo di condivisione, gioia e momenti indimenticabili. Ogni fetta racchiude la magia delle celebrazioni, incorniciata dall'allegria e dal calore di stare insieme. Questa è la nostra torta delle feste, un capolavoro culinario che celebra i momenti più speciali con gusto e dolcezza, rendendo ogni occasione ancora più memorabile.</p>
+                <div class="previewprezzotorta">99,99€ (senza le preferenze)</div>
+                <div class="pulsantiopzioniprewiew">
+                    <a href="#" class="pulsanteaggiungiallashoppingbag" onclick="nuovoprodottoshoppingbag()">Aggiungi alla Shopping Bag</a>
+                    <a href="#" class="pulsanteaggiungiaipreferiti" onclick="nuovoprodottopreferiti()">Aggiungi ai preferiti</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview" numerodellatortapreview="t-5">
+            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <img src="TORTA BOX TIRAMISÙ.png" alt="Tiramisù" title="Tiramisù">
+            <h3>TIRAMISÙ</h3>
+            <div class="stelleperlarecensione">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+                <span>(12 recensioni)</span>
+                <p>Il nostro tiramisù è molto più di un semplice dessert: è un simbolo di convivialità e piacere, un dolce che porta con sé il sapore delle tradizioni e dei momenti condivisi. Ogni cucchiaio racchiude un'esplosione di gusto, incorniciata dalla cremosità del mascarpone e dall'aroma del caffè. Questo è il nostro tiramisù, un'opera d'arte culinaria che celebra la dolcezza della vita con un tocco di eleganza e passione, perfetto per rendere ogni occasione ancora più speciale.</p>
+                <div class="previewprezzotorta">12,99€ (a fetta)</div>
+                <div class="pulsantiopzioniprewiew">
+                    <a href="#" class="pulsanteaggiungiallashoppingbag" onclick="nuovoprodottoshoppingbag()">Aggiungi alla Shopping Bag</a>
+                    <a href="#" class="pulsanteaggiungiaipreferiti" onclick="nuovoprodottopreferiti()">Aggiungi ai preferiti</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview" numerodellatortapreview="t-6">
+            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <img src="TORTA BOX PARADISO.jpg" alt="Torta paradiso" title="Torta paradiso">
+            <h3>TORTA PARADISO</h3>
+            <div class="stelleperlarecensione">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+                <span>(18 recensioni)</span>
+                <p>La nostra torta paradiso è molto più di un semplice dolce: è un simbolo di leggerezza e delicatezza, un soffice abbraccio che porta con sé il sapore della semplicità e del comfort. Ogni morso è una nuvola di dolcezza, incorniciata dalla fragranza del burro e dalla morbidezza impalpabile che coccola il palato. Questa è la nostra torta paradiso, un capolavoro che celebra i piccoli piaceri della vita, perfetta per rendere ogni momento più dolce e speciale.</p>
+                <div class="previewprezzotorta">5,99€ (a fetta)</div>
+                <div class="pulsantiopzioniprewiew">
+                    <a href="#" class="pulsanteaggiungiallashoppingbag" onclick="nuovoprodottoshoppingbag()">Aggiungi alla Shopping Bag</a>
+                    <a href="#" class="pulsanteaggiungiaipreferiti" onclick="nuovoprodottopreferiti()">Aggiungi ai preferiti</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            let previewtortedisponibili = document.querySelector(".previewtortedisponibili");
+            let preview = previewtortedisponibili.querySelectorAll(".preview");
+            
+            // Permette di visualizzare la corretta preview per ogni torta, in questo modo basterà che l'utente clicchi sopra ad una torta nell'elenco e poi apparirà la preview associata alla torta
+            document.querySelectorAll(".contenitorelenostretorte .tortedisponibili").forEach(tortedisponibili =>{
+                tortedisponibili.onclick = () =>{
+                    previewtortedisponibili.style.display = "flex";
+                    let nometorta = tortedisponibili.getAttribute("numerodellatorta");
+                    preview.forEach(preview =>{
+                        let numerodellatortapreview = preview.getAttribute("numerodellatortapreview");
+                        if(nometorta == numerodellatortapreview){
+                            preview.classList.add("attivo", "animazionedientratapreviewtortedisponibili");
+                        }
+                    });
+                };
+            });
+
+            // Permette di poter uscire, attraverso l'apposito pulsante, dalla preview di ogni torta. In questo modo basterà che l'utente clicchi sulla X di uscita in una preview di una torta nell'elenco e tornerà alla schermata precedente, nonchè alla liste delle torte disponibili
+            preview.forEach(close => {
+                close.querySelector(".pulsantechiusurapreview").onclick = () => {
+                    // Aggiunge la classe di animazione di uscita alla preview corrente
+                    close.classList.add("animazionediuscitapreviewtortedisponibili");
+            
+                    // Il listener per l'evento "animationend" (che permette a Javascript a sapere quando è finita un animazione) serve per rimuovere la classe dopo l'animazione
+                    close.addEventListener("animationend", () => {
+                        close.classList.remove("attivo", "animazionediuscitapreviewtortedisponibili");
+                        previewtortedisponibili.style.display = "none"; // Nasconde il contenitore principale delle preview
+                    }, 
+                    { once: true }); // Assicura che l'evento sia gestito una sola volta per evitare problemi
+                };
+            });
+        </script>
     </div>
 </section>
+<script>
+// Previene l'azione predefinita del tasto destro del mouse, quindi di conseguenza non è più possibile salvare immagini o gestire altre opzioni del menù contestuale del tasto destro
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault(); 
+  });
+</script>
+<script>
+// Forza lo scroll della pagina all'inizio ogni volta che viene ricaricata o quando si lascia la pagina e la si riapre dopo.
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
+</script>
 </body>
 </html>

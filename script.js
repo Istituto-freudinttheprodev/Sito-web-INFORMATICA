@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function cambioimmaginedisfondo() {
     const mumerorandomico = Math.floor(Math.random() * listaimmaginidisfondo.length);
     const immaginerandomica = listaimmaginidisfondo[mumerorandomico];
-    document.getElementById('homepage').style.backgroundImage = `url('${immaginerandomica}')`;
+    document.getElementById("homepage").style.backgroundImage = `url("${immaginerandomica}")`;
   }
 
   // Cambia l'immagine di sfondo della homepage ogni 3 secondi (3000 millisecondi)
@@ -34,3 +34,24 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Cambia l'immagine di sfondo all'avvio della pagina
   cambioimmaginedisfondo();
+
+  // Funzione per il contatore della shopping bag
+  function nuovoprodottoshoppingbag() {
+    // Incrementa il contatore
+    var contatoreprodottishoppingbag = document.getElementById("contatoreprodottishoppingbag");
+    var numeroprodottishoppingbag = parseInt(contatoreprodottishoppingbag.innerText);
+    contatoreprodottishoppingbag.innerText = numeroprodottishoppingbag + 1;
+  }
+  
+  // Funzione per il contatore dei preferiti
+  function nuovoprodottopreferiti() {
+    // Incrementa il contatore
+    var contatoreprodottipreferiti = document.getElementById("contatoreprodottipreferiti");
+    var numeroprodottipreferiti = parseInt(contatoreprodottipreferiti.innerText);
+    contatoreprodottipreferiti.innerText = numeroprodottipreferiti + 1;
+  }
+
+// Disabilita il trascinamento delle immagini in una altra scheda (per togliere la possibilità di copiarle)
+document.querySelectorAll("img").forEach(img => {
+  img.addEventListener("dragstart", (e) => e.preventDefault());
+});
