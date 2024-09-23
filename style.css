@@ -111,6 +111,7 @@ img {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
+  font-size: 90%;
 }
 
 .bottonepopup{
@@ -121,13 +122,6 @@ img {
   cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
   border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
   background-color: white;
-}
-
-.popup-content{
-  font-size: 90%;
-}
-
-.bottonepopup{
   font-size: 140%;
 }
 
@@ -289,15 +283,18 @@ header .menùdispositivimobili{
   border-radius: 0%;
 }
 
-.informazionipasticceria .contenutoinformazionipasticceria .contenutoinformazionipasticceria2 h3{
-  font-size: 3rem;
-  color: black
+/* Nasconde il pulsante di download dal menù delle opzioni del video per i browser che lo supportano */
+video::-internal-media-controls-download-button {
+  display: none;
 }
 
-.informazionipasticceria .contenutoinformazionipasticceria .contenutoinformazionipasticceria2 p{
-  font-size: 1.5rem;
-  color: black;
-  line-height: 1.5;
+/* Nasconde il pulsante di download dal menù delle opzioni del video per Firefox */
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+video::-webkit-media-controls-panel {
+  width: calc(100% - 30px); /* Regola la larghezza menù delle opzioni del video per adattarsi meglio al layout*/
 }
 
 /* Quando il video è in modalità a schermo intero */
@@ -312,6 +309,17 @@ header .menùdispositivimobili{
 }
 .videodelsito:fullscreen{
   border: none; /* Nasconde il bordo */
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenutoinformazionipasticceria2 h3{
+  font-size: 3rem;
+  color: black
+}
+
+.informazionipasticceria .contenutoinformazionipasticceria .contenutoinformazionipasticceria2 p{
+  font-size: 1.5rem;
+  color: black;
+  line-height: 1.5;
 }
 
 .contenitoreicone{

@@ -11,7 +11,6 @@
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>    
@@ -24,7 +23,7 @@
         Theme: "classic",
         Message: "Questo sito utilizza i cookie per assicurarti una migliore esperienza sul nostro sito, chiudendo questo banner accetti l'utilizzo di quest'ultimi.",
         ButtonText: "Chiudi il banner",
-        LinkText: '<a href="Privacy&Policy.html" target="_blank">(Informativa sulla Privacy & Policy)</a>',
+        LinkText: '<a href="Privacy&Policy.html" target="_blank" title="Informativa sulla Privacy & Policy">(Informativa sulla Privacy & Policy)</a>',
         Time: "3"
     });
 </script>
@@ -52,7 +51,7 @@
                     <ion-icon name="cart-outline" title="Shopping Bag" class="linknonsottolineati" id="shoppingbag"></ion-icon>
                     <span id="contatoreprodottishoppingbag" class="contatoreprodottishoppingbag">0</span>
                 </a>
-                <a href="Login.html" target="_blank"><ion-icon name="log-in-outline" title="Login/Logout" class="linknonsottolineati" id="login/logout"></ion-icon></a> 
+                <a href="Login.html" target="_blank"><ion-icon name="log-in-outline" title="Login" class="linknonsottolineati" id="login/logout"></ion-icon></a> 
             </div>
         </nav>
     </header>
@@ -80,7 +79,7 @@
                 ACCESS TO AND USE OF THIS SITE IS SUBJECT TO YOUR FULL ACCEPTANCE OF THESE TERMS AND CONDITIONS.
             </strong>
         </p>
-        <button class="bottonepopup" onclick="chiudipopup()">Chiudi il popup</button>
+        <button class="bottonepopup" onclick="chiudipopup()" title="Chiudi il popup">Chiudi il popup</button>
     </div>
 </div>
 
@@ -92,7 +91,7 @@
         <span>Artigiani pasticceri milanesi <br></span>
         <span>dal 2024</span>
         <p>Dopo neanche un anno di lavoro (a dir la verità neanche un mese ma vabbè), 0 generazioni meneghine di maestri pasticceri e un incalcolabile numero di dolcezze (zero) sfornate dalla storica bottega di via Ippodromo 7 a Milano, oggi la Pasticceria KiuGroove è apprezzata e riconosciuta da nessuno come eccellenza della pasticceria lombarda e un po’ più in giù (massimo fino alla rotonda di quella via che si trova in fondo a quella strada).</p>
-        <a href="#" class="pulsanteprenotailtuodolceealtro">Prenota il tuo dolce!</a>
+        <a href="#" class="pulsanteprenotailtuodolceealtro" title="Prenota il tuo dolce!">Prenota il tuo dolce!</a>
     </div>
 </section>
 
@@ -106,7 +105,7 @@
             <h3>La pasticceria</h3>
             <p>Un’ampia selezione di torte classiche, da forno e moderne affianca una proposta di biscotti insieme a delle delizie al cioccolato.</p>
             <p>Da buoni milanesi sappiamo fare ottimi panettoni, ma anche come soddisfare gli amanti del salato (no, non siamo una pasticceria normale).</p>
-            <a href="#" class="pulsanteprenotailtuodolceealtro">Scopri di più!</a>
+            <a href="#" class="pulsanteprenotailtuodolceealtro" title="Scopri di più!">Scopri di più!</a>
         </div>
     </div>
 </section>
@@ -149,7 +148,7 @@
 <section class="lenostretorte" id="lenostretorte">
     <div class="introduzionecontenitorelenostretorte">
         <h3>Le nostre torte</h3>
-        <p>Qui sotto puoi trovare tutte le torte che noi realizziamo con la possibilità di aggiungerle ai Preferiti o alla Shopping Bag</p>
+        <p>Qui sotto puoi trovare tutte le torte che noi realizziamo con la possibilità di aggiungerle ai Preferiti o alla Shopping Bag, per farlo basta cliccare sopra l'immagine di ogni torta e selezionare sotto l'opzione desiderata</p>
         <p>N.B.: Su qualche device la visualizzazione delle immagini potrebbe non essere perfetta e potrebbero esserci delle immagini fuori dai bordi. Per risolvere il problema, prova a mettere a schermo intero o ad ingradire la finestra</p>    
     </div>
     <div class="contenitorelenostretorte">
@@ -194,7 +193,7 @@
     <div class="previewtortedisponibili">
 
         <div class="preview" numerodellatortapreview="t-1">
-            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <ion-icon name="close-outline" class="pulsantechiusurapreview" title="Chiudi l'anteprima"></ion-icon>
             <img src="TORTA BOX SACHER.png" alt="Torta Sacher" title="Torta Sacher">
             <h3>TORTA SACHER</h3>
             <div class="stelleperlarecensione">
@@ -214,7 +213,7 @@
         </div>
 
         <div class="preview" numerodellatortapreview="t-2">
-            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <ion-icon name="close-outline" class="pulsantechiusurapreview" title="Chiudi l'anteprima"></ion-icon>
             <img src="TORTA BOX AL DOPPIO CIOCCOLATO.png" alt="Torta al doppio cioccolato" title="Torta al doppio cioccolato">
             <h3>TORTA AL DOPPIO CIOCCOLATO</h3>
             <div class="stelleperlarecensione">
@@ -233,7 +232,7 @@
         </div>
 
         <div class="preview" numerodellatortapreview="t-3">
-            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <ion-icon name="close-outline" class="pulsantechiusurapreview" title="Chiudi l'anteprima"></ion-icon>
             <img src="TORTA BOX NUZIALE.png" alt="Torta nuziale" title="Torta nuziale">
             <h3>TORTA NUZIALE (PERSONALIZZABILE)</h3>
             <div class="stelleperlarecensione">
@@ -252,7 +251,7 @@
         </div>
 
         <div class="preview" numerodellatortapreview="t-4">
-            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <ion-icon name="close-outline" class="pulsantechiusurapreview" title="Chiudi l'anteprima"></ion-icon>
             <img src="TORTA BOX PER LE FESTE.png" alt="Torta per le feste" title="Torta per le feste">
             <h3>TORTA PER LE FESTE (PERSONALIZZABILE)</h3>
             <div class="stelleperlarecensione">
@@ -270,7 +269,7 @@
         </div>
 
         <div class="preview" numerodellatortapreview="t-5">
-            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <ion-icon name="close-outline" class="pulsantechiusurapreview" title="Chiudi l'anteprima"></ion-icon>
             <img src="TORTA BOX TIRAMISÙ.png" alt="Tiramisù" title="Tiramisù">
             <h3>TIRAMISÙ</h3>
             <div class="stelleperlarecensione">
@@ -287,7 +286,7 @@
         </div>
 
         <div class="preview" numerodellatortapreview="t-6">
-            <ion-icon name="close-outline" class="pulsantechiusurapreview"></ion-icon>
+            <ion-icon name="close-outline" class="pulsantechiusurapreview" title="Chiudi l'anteprima"></ion-icon>
             <img src="TORTA BOX PARADISO.jpg" alt="Torta paradiso" title="Torta paradiso">
             <h3>TORTA PARADISO</h3>
             <div class="stelleperlarecensione">
