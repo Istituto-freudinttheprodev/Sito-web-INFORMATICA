@@ -12,6 +12,16 @@ body {
     font-size: 42px;
 }
 
+.header {
+    display: flex;
+    align-items: center; /* Questo allinea gli elementi verticalmente al centro */
+}
+
+.marchio{
+    width: 200px;
+    height: auto;
+}
+
 /* Disabilita l'effetto di feedback della pressione di un pulsante in azzurro su i dispositi mobile come tablet e telefoni */
 *{
     -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */

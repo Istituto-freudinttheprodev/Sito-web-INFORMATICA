@@ -1,0 +1,104 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: beige;
+    user-select: none;
+}
+
+/* Disabilita il trascinamento delle immagini in una altra scheda (per togliere la possibilità di copiarle) */
+img {
+    -webkit-user-drag: none; /* Per browser WebKit come Chrome e Safari */
+    user-drag: none; /* Per Firefox */
+}
+
+/* Disabilita l'effetto di feedback della illuminazione in azzurro alla pressione di un pulsante o altro su i dispositi mobile come tablet e telefoni */
+*{
+    -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */
+    -webkit-touch-callout: none; /* Impedisce la visualizzazione del menu di azione a lungo tocco */
+    -ms-touch-action: manipulation; /* Imposta il comportamento del tocco */
+    touch-action: manipulation; /* Imposta il comportamento del tocco */
+}
+
+.titoloprincipalepagina{
+    text-align: center;
+    font-size: 42px;
+    color: red;
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Questo allinea gli elementi verticalmente al centro */
+}
+
+.marchio{
+    width: 200px;
+    height: auto;
+}
+
+.contenitoredelvideo{
+    display: flex;
+    flex: 1 1 40rem;
+    position: relative;
+    justify-content: center; /* Per allineare orizzontalmente */
+    align-items: center;     /* Per allineare verticalmente */
+}
+
+.contenitoredelvideo video{
+    width: 50%;
+    border: 1.5rem solid #febd59;
+    border-radius: .7rem;
+    box-shadow: 0 0.5rem 2rem black;
+    height: 50%;
+    object-fit: cover;
+}
+
+.contenitoredelvideo .videomemepagina404:-webkit-full-screen{
+    border: none;
+    border-radius: 0%;
+}
+
+.contenitoredelvideo .videomemepagina404:-moz-full-screen{
+    border: none;
+    border-radius: 0%;
+}
+
+.contenitoredelvideo .videomemepagina404:-ms-fullscreen{
+    border: none;
+    border-radius: 0%;
+}
+
+.contenitoredelvideo .videomemepagina404:fullscreen{
+    border: none;
+    border-radius: 0%;
+}
+
+/* Nasconde il pulsante di download dal menù delle opzioni del video per i browser che lo supportano */
+video::-internal-media-controls-download-button {
+    display: none;
+}
+  
+/* Nasconde il pulsante di download dal menù delle opzioni del video per Firefox */
+video::-webkit-media-controls-enclosure {
+    overflow: hidden;
+}
+  
+video::-webkit-media-controls-panel {
+    width: calc(100% - 30px); /* Regola la larghezza menù delle opzioni del video per adattarsi meglio al layout*/
+}
+  
+/* Quando il video è in modalità a schermo intero */
+.videomemepagina404:-webkit-full-screen{
+    border: none; /* Nasconde il bordo */
+}
+.videomemepagina404:-moz-full-screen{
+    border: none; /* Nasconde il bordo */
+}
+.videomemepagina404:-ms-fullscreen{
+    border: none; /* Nasconde il bordo */
+}
+.videomemepagina404:fullscreen{
+    border: none; /* Nasconde il bordo */
+}

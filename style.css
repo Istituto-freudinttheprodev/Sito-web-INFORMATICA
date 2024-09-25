@@ -1,21 +1,25 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: "Montserrat", sans-serif;
   background-color: beige;
   user-select: none;
 }
 
-/* Disabilita l'effetto di feedback della pressione di un pulsante in azzurro su i dispositi mobile come tablet e telefoni */
+/* Disabilita il trascinamento delle immagini in una altra scheda (per togliere la possibilità di copiarle) */
+img {
+  -webkit-user-drag: none; /* Per browser WebKit come Chrome e Safari */
+  user-drag: none; /* Per Firefox */
+}
+
+/* Disabilita l'effetto di feedback della illuminazione in azzurro alla pressione di un pulsante o altro su i dispositi mobile come tablet e telefoni */
 *{
   -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */
   -webkit-touch-callout: none; /* Impedisce la visualizzazione del menu di azione a lungo tocco */
   -ms-touch-action: manipulation; /* Imposta il comportamento del tocco */
   touch-action: manipulation; /* Imposta il comportamento del tocco */
-}
-
-/* Disabilita il trascinamento delle immagini in una altra scheda (per togliere la possibilità di copiarle) */
-img {
-  -webkit-user-drag: none; /* Per browser WebKit come Chrome e Safari */
-  user-drag: none; /* Per Firefox */
 }
 
 /* Esempio di palette personalizzata per il banner dei cookie */
@@ -149,7 +153,7 @@ img {
 }
 
 .linknonsottolineati{
-  color: inherit; /* Utilizza il colore del testo del padre */
+  color: inherit; /* Utilizza il colore del testo del padre, quindi il colore che è presente di base */
   text-decoration: none; /* Rimuove la sottolineatura */
   font-weight: normal; /* Imposta lo stile del testo normale */
 }
