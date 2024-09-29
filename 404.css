@@ -43,7 +43,7 @@ video::-moz-download-button {
 
 .titoloprincipalepagina404{
     text-align: center;
-    font-size: 42px;
+    font-size: 43px;
     color: red;
 }
 
@@ -113,12 +113,12 @@ video::-moz-download-button {
 
 .frasesatiricapagina404{
     text-align: center;
-    font-size: 42px;
+    font-size: 43px;
 }
 
 .parteinrossofrasesatiricapagina404{
     text-align: center;
-    font-size: 42px;
+    font-size: 43px;
     color: red;
 }
 
@@ -148,7 +148,35 @@ video::-moz-download-button {
 @media (max-width:991px){
 
     html{
-        font-size: 27%; /* Imposta la dimensione del testo al 55% */
+        font-size: 67%; /* Imposta la dimensione del testo al 55% */
+    }
+
+    .titoloprincipalepagina404{
+        font-size: 37px;
+    }
+
+    .frasesatiricapagina404 {
+        font-size: 37px;
+    }
+
+    .parteinrossofrasesatiricapagina404{
+        font-size: 37px;
+    }
+
+    .collegamentoallahomepage{
+        font-size: 30px;
+    }
+
+    .collegamentoallahomepage a{
+        font-size: 30px;
+    }
+
+    .frasecountdownhomepage{
+        font-size: 30px;
+    }
+
+    .frasecountdownhomepage span{
+        font-size: 30px;
     }
 
     .contenitoredelvideo{
@@ -172,9 +200,37 @@ video::-moz-download-button {
 @media (max-width:768px){
 
     html{
-        font-size: 39%; /* Imposta la dimensione del testo al 55% */
+        font-size: 59%; /* Imposta la dimensione del testo al 55% */
     }
-    
+
+    .titoloprincipalepagina404{
+        font-size: 47px;
+    }
+
+    .frasesatiricapagina404 {
+        font-size: 43px;
+    }
+
+    .parteinrossofrasesatiricapagina404{
+        font-size: 43px;
+    }
+
+    .collegamentoallahomepage{
+        font-size: 37px;
+    }
+
+    .collegamentoallahomepage a{
+        font-size: 37px;
+    }
+
+    .frasecountdownhomepage{
+        font-size: 37px;
+    }
+
+    .frasecountdownhomepage span{
+        font-size: 37px;
+    }
+
     .contenitoredelvideo{
         display: flex;
         flex: 1 1 40rem;
@@ -184,11 +240,63 @@ video::-moz-download-button {
     }
     
     .contenitoredelvideo video{
-        width: 70%;
+        width: 85%;
         border: 1.5rem solid #febd59;
         border-radius: .7rem;
         box-shadow: 0 0.5rem 2rem black;
-        height: 70%;
+        height: 85%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 39%; /* Imposta la dimensione del testo al 55% */
+    }
+
+    .titoloprincipalepagina404{
+        font-size: 43px;
+    }
+
+    .frasesatiricapagina404 {
+        font-size: 37px;
+    }
+
+    .parteinrossofrasesatiricapagina404{
+        font-size: 37px;
+    }
+
+    .collegamentoallahomepage{
+        font-size: 30px;
+    }
+
+    .collegamentoallahomepage a{
+        font-size: 30px;
+    }
+
+    .frasecountdownhomepage{
+        font-size: 30px;
+    }
+
+    .frasecountdownhomepage span{
+        font-size: 30px;
+    }
+
+    .contenitoredelvideo{
+        display: flex;
+        flex: 1 1 40rem;
+        position: relative;
+        justify-content: center; /* Per allineare orizzontalmente */
+        align-items: center;     /* Per allineare verticalmente */
+    }
+    
+    .contenitoredelvideo video{
+        width: 85%;
+        border: 1.5rem solid #febd59;
+        border-radius: .7rem;
+        box-shadow: 0 0.5rem 2rem black;
+        height: 85%;
         object-fit: cover;
     }
 }

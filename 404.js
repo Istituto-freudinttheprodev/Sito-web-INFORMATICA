@@ -14,22 +14,22 @@ window.onbeforeunload = function () {
 };
 
 function countdownhomepage() {
-    // Questa variabile imposta il timer a 60 secondi
-    let timer = 60;
+    // Questa variabile imposta il countdown a 60 secondi
+    let countdown = 60;
 
     // Mostra il countdown
-    const countdownElement = document.getElementById("countdownhomepage");
-    const interval = setInterval(() => {
-        countdownElement.innerHTML = timer; // Aggiorna il timer visualizzato nella pagina
-        timer--; // Decrementa il valore della variabile timer di 1 ad ogni secondo, in modo da far terminare il timer entro i 60 secondi prestabiliti prima
+    const countdowntimerhomepage = document.getElementById("countdownhomepage");
+    const intervalloditempocountdown = setInterval(() => {
+        countdowntimerhomepage.innerHTML = countdown; // Aggiorna il countdown visualizzato nella pagina
+        countdown--; // Decrementa il valore della variabile countdown di 1 ad ogni secondo, in modo da far terminare il countdown entro i 60 secondi prestabiliti prima
 
-        // Quando il timer arriva a zero, ferma l'intervallo e reindirizza alla pagina HTML indicata sotto
-        if (timer < 0) {
-            clearInterval(interval); // Ferma l'intervallo di aggiornamento del timer
+        // Quando il countdown arriva a zero, ferma l'intervallo e reindirizza alla pagina HTML indicata sotto
+        if (countdown < 0) {
+            clearInterval(intervalloditempocountdown); // Ferma l'intervallo di aggiornamento del countdown
             window.location.href = "index.html"; // Viene indicato il nome della pagina HTML a cui deve reindirizzare
         }
-    }, 1000); // Aggiorna ad ogni secondo il timer nel codice
+    }, 1000); // Aggiorna ad ogni secondo il countdown nel codice
 }
 
-// Avvia il timer quando la pagina è caricata
+// Avvia il countdown quando la pagina è completamente caricata
 window.onload = countdownhomepage;
