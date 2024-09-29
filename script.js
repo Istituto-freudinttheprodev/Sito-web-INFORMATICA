@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function cambioimmaginedisfondo() {
     const mumerorandomico = Math.floor(Math.random() * listaimmaginidisfondo.length);
     const immaginerandomica = listaimmaginidisfondo[mumerorandomico];
-    document.getElementById("homepage").style.backgroundImage = `url("${immaginerandomica}")`;
+    document.getElementById("Home page").style.backgroundImage = `url("${immaginerandomica}")`;
   }
 
   // Cambia l'immagine di sfondo della homepage ogni 3 secondi (3000 millisecondi)

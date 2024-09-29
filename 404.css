@@ -14,6 +14,25 @@ img {
     user-drag: none; /* Per Firefox */
 }
 
+/* Nasconde il pulsante di download dal menù delle opzioni del video per i browser che lo supportano */
+video::-internal-media-controls-download-button {
+    display: none;
+}
+  
+/* Nasconde il pulsante di download dal menù delle opzioni del video per Firefox */
+video::-webkit-media-controls-enclosure {
+    overflow: hidden;
+}
+  
+video::-webkit-media-controls-panel {
+    width: calc(100% - 30px); /* Regola la larghezza menù delle opzioni del video per adattarsi meglio al layout*/
+}
+
+/* Nasconde il pulsante di download su Firefox */
+video::-moz-download-button {
+    display: none;
+}
+
 /* Disabilita l'effetto di feedback della illuminazione in azzurro alla pressione di un pulsante o altro su i dispositi mobile come tablet e telefoni */
 *{
     -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */
@@ -22,7 +41,7 @@ img {
     touch-action: manipulation; /* Imposta il comportamento del tocco */
 }
 
-.titoloprincipalepagina{
+.titoloprincipalepagina404{
     text-align: center;
     font-size: 42px;
     color: red;
@@ -33,7 +52,7 @@ img {
     align-items: center; /* Questo allinea gli elementi verticalmente al centro */
 }
 
-.marchio{
+.logo{
     width: 200px;
     height: auto;
 }
@@ -74,31 +93,102 @@ img {
     border: none;
     border-radius: 0%;
 }
-
-/* Nasconde il pulsante di download dal menù delle opzioni del video per i browser che lo supportano */
-video::-internal-media-controls-download-button {
-    display: none;
-}
-  
-/* Nasconde il pulsante di download dal menù delle opzioni del video per Firefox */
-video::-webkit-media-controls-enclosure {
-    overflow: hidden;
-}
-  
-video::-webkit-media-controls-panel {
-    width: calc(100% - 30px); /* Regola la larghezza menù delle opzioni del video per adattarsi meglio al layout*/
-}
   
 /* Quando il video è in modalità a schermo intero */
 .videomemepagina404:-webkit-full-screen{
     border: none; /* Nasconde il bordo */
 }
+
 .videomemepagina404:-moz-full-screen{
     border: none; /* Nasconde il bordo */
 }
+
 .videomemepagina404:-ms-fullscreen{
     border: none; /* Nasconde il bordo */
 }
+
 .videomemepagina404:fullscreen{
     border: none; /* Nasconde il bordo */
+}
+
+.frasesatiricapagina404{
+    text-align: center;
+    font-size: 42px;
+}
+
+.parteinrossofrasesatiricapagina404{
+    text-align: center;
+    font-size: 42px;
+    color: red;
+}
+
+.collegamentoallahomepage{
+    text-align: center;
+    font-size: 37px;
+}
+
+.collegamentoallahomepage a{
+    text-align: center;
+    font-size: 37px;
+    color: #febd59;
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.frasecountdownhomepage{
+    text-align: center;
+    font-size: 37px;
+}
+
+.countdownhomepage{
+    text-align: center;
+    font-size: 37px;
+    color: red;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 27%; /* Imposta la dimensione del testo al 55% */
+    }
+
+    .contenitoredelvideo{
+        display: flex;
+        flex: 1 1 40rem;
+        position: relative;
+        justify-content: center; /* Per allineare orizzontalmente */
+        align-items: center;     /* Per allineare verticalmente */
+    }
+    
+    .contenitoredelvideo video{
+        width: 70%;
+        border: 1.5rem solid #febd59;
+        border-radius: .7rem;
+        box-shadow: 0 0.5rem 2rem black;
+        height: 70%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 39%; /* Imposta la dimensione del testo al 55% */
+    }
+    
+    .contenitoredelvideo{
+        display: flex;
+        flex: 1 1 40rem;
+        position: relative;
+        justify-content: center; /* Per allineare orizzontalmente */
+        align-items: center;     /* Per allineare verticalmente */
+    }
+    
+    .contenitoredelvideo video{
+        width: 70%;
+        border: 1.5rem solid #febd59;
+        border-radius: .7rem;
+        box-shadow: 0 0.5rem 2rem black;
+        height: 70%;
+        object-fit: cover;
+    }
 }

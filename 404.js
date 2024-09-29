@@ -12,3 +12,24 @@ document.addEventListener("contextmenu", function(e) {
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
+
+function countdownhomepage() {
+    // Questa variabile imposta il timer a 60 secondi
+    let timer = 60;
+
+    // Mostra il countdown
+    const countdownElement = document.getElementById("countdownhomepage");
+    const interval = setInterval(() => {
+        countdownElement.innerHTML = timer; // Aggiorna il timer visualizzato nella pagina
+        timer--; // Decrementa il valore della variabile timer di 1 ad ogni secondo, in modo da far terminare il timer entro i 60 secondi prestabiliti prima
+
+        // Quando il timer arriva a zero, ferma l'intervallo e reindirizza alla pagina HTML indicata sotto
+        if (timer < 0) {
+            clearInterval(interval); // Ferma l'intervallo di aggiornamento del timer
+            window.location.href = "index.html"; // Viene indicato il nome della pagina HTML a cui deve reindirizzare
+        }
+    }, 1000); // Aggiorna ad ogni secondo il timer nel codice
+}
+
+// Avvia il timer quando la pagina è caricata
+window.onload = countdownhomepage;

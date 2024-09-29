@@ -14,6 +14,25 @@ img {
   user-drag: none; /* Per Firefox */
 }
 
+/* Nasconde il pulsante di download dal menù delle opzioni del video per i browser che lo supportano */
+video::-internal-media-controls-download-button {
+  display: none;
+}
+
+/* Nasconde il pulsante di download dal menù delle opzioni del video per Firefox */
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+video::-webkit-media-controls-panel {
+  width: calc(100% - 30px); /* Regola la larghezza menù delle opzioni del video per adattarsi meglio al layout*/
+}
+
+/* Nasconde il pulsante di download su Firefox */
+video::-moz-download-button {
+  display: none;
+}
+
 /* Disabilita l'effetto di feedback della illuminazione in azzurro alla pressione di un pulsante o altro su i dispositi mobile come tablet e telefoni */
 *{
   -webkit-tap-highlight-color: transparent; /* Per Safari, iOS e altri browser WebKit */
@@ -129,7 +148,7 @@ img {
   font-size: 140%;
 }
 
-.marchio{
+.logo{
   width: 200px;
   height: auto;
 }
@@ -145,11 +164,6 @@ img {
 
 .barradinavigazione a{
   margin-right: 38px;
-}
-
-.logo{
-  width: 20px;
-  height: 20px;
 }
 
 .linknonsottolineati{
@@ -287,30 +301,19 @@ header .menùdispositivimobili{
   border-radius: 0%;
 }
 
-/* Nasconde il pulsante di download dal menù delle opzioni del video per i browser che lo supportano */
-video::-internal-media-controls-download-button {
-  display: none;
-}
-
-/* Nasconde il pulsante di download dal menù delle opzioni del video per Firefox */
-video::-webkit-media-controls-enclosure {
-  overflow: hidden;
-}
-
-video::-webkit-media-controls-panel {
-  width: calc(100% - 30px); /* Regola la larghezza menù delle opzioni del video per adattarsi meglio al layout*/
-}
-
 /* Quando il video è in modalità a schermo intero */
 .videodelsito:-webkit-full-screen{
   border: none; /* Nasconde il bordo */
 }
+
 .videodelsito:-moz-full-screen{
   border: none; /* Nasconde il bordo */
 }
+
 .videodelsito:-ms-fullscreen{
   border: none; /* Nasconde il bordo */
 }
+
 .videodelsito:fullscreen{
   border: none; /* Nasconde il bordo */
 }
@@ -642,6 +645,11 @@ video::-webkit-media-controls-panel {
     margin-left: 7px;
   }
 
+  .linknonsottolineati:hover{
+    font-weight: bold; /* Imposta lo stile del testo in grassetto */
+    color: beige;
+  }
+
   /* Mostra la barra di navigazione quando il toggler è selezionato */
   header #toggler:checked ~ .elementibarranavigazione{
     clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Mostra la barra di navigazione */
@@ -658,7 +666,7 @@ video::-webkit-media-controls-panel {
     display block; /* Imposta i link come blocchi */
   }
 
-  /* Stile quando l'icona del menù è attiva (premuto) */
+  /* Stile quando l'icona del menù è attiva (cioè quando viene premuta) */
   header .menùdispositivimobili:active{
     background-color: transparent; /* Imposta lo sfondo trasparente */
   }
