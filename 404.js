@@ -15,7 +15,7 @@ window.onbeforeunload = function () {
 
 function countdownhomepage() {
     // Questa variabile imposta il countdown a 60 secondi
-    let countdown = 60;
+    let countdown = 30;
 
     // Mostra il countdown
     const countdowntimerhomepage = document.getElementById("countdownhomepage");
